@@ -12,6 +12,9 @@ import  {HomeComponent} from './home.component';
 import { AboutComponent} from './about.component'
 import {FormsComponent} from './forms.component';
 import {LoginComponent} from './login.component';
+import { PrivateComponent } from './private.component';
+import { AuthenticationService } from './authentication.service';
+
 
 
 @NgModule({
@@ -21,7 +24,9 @@ import {LoginComponent} from './login.component';
     AboutComponent,
     HomeComponent,
     FormsComponent,
-    LoginComponent
+    LoginComponent,
+    PrivateComponent
+    
 
     ],
     imports: [
@@ -31,7 +36,7 @@ import {LoginComponent} from './login.component';
     ReactiveFormsModule,
     HttpModule
     ],
-    providers: [],
+    providers: [appRoutingProviders, AuthenticationService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
